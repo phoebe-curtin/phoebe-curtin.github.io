@@ -1,6 +1,9 @@
 body {
     text-align: center;
-    background-image: url(../img/new-clouds.jpeg);
+    background-image: url(../img/new-clouds.jpg);
+    background-size: 1400px
+
+    ;
     font-family: 'Press Start 2P', cursive;
 }
 h1 {
