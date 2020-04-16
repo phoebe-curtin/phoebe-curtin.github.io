@@ -10,7 +10,10 @@ body {
 h1 {
     font-size: 70pt;
 }
-
+.photo {
+    position: relative;
+    left
+}
 .white-text {
     color: white;
 
@@ -19,8 +22,8 @@ h1 {
     text-align: left;
     font-size: 25pt;
     position: relative;
-    bottom: 240px;
-    left: 170px;
+    bottom: 100pt;
+    right: 580pt;
 }
 .soundcloud {
     text-align: left;
@@ -50,10 +53,7 @@ h1 {
     right: 575px;
     bottom: 50px;
 }
-.move-everything {
-    position: relative;
-    top: 23px;
-}
+
 
 p {
     color: white;
