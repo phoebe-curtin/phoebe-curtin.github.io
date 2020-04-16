@@ -10,6 +10,10 @@ body {
 h1 {
     font-size: 70pt;
 }
+.moveup {
+    position: relative;
+    bottom: 30pt;
+}
 .photo {
     position: relative;
     left: 310pt;
@@ -29,8 +33,10 @@ h1 {
 .box-text { 
     color: black;
     font-size: 15pt;
-    text-align: center
     
+    
+    
+
 }
 .list {
     color: violet;
@@ -77,7 +83,7 @@ h1 {
 }
 .home { font-size: 25pt;
     position: relative;
-    top: 440pt;
+   top: 700pt;
 }
 
 p {
