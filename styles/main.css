@@ -18,6 +18,28 @@ h1 {
     color: white;
 
 }
+.chart {
+    color: violet;
+    font-size: 15pt;
+}
+.boxes { 
+    color: white;
+    font-size: 40pt;
+}
+.box-text { 
+    color: black;
+    font-size: 15pt;
+    text-align: center
+    
+}
+.list {
+    color: violet;
+    font-size: 15pt;
+}
+.yeezys {
+  text-align: left;
+}
+
 .blog {
     text-align: left;
     font-size: 25pt;
@@ -54,6 +76,8 @@ h1 {
     top: 100pt;
 }
 .home { font-size: 25pt;
+    position: relative;
+    top: 440pt;
 }
 
 p {
