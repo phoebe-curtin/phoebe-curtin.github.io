@@ -1,12 +1,12 @@
 body {
     text-align: center;
-    background-image: url(img/pink-clouds.jpeg);
+    background-image: url(../img/pink-clouds.jpeg);
     background-size: 1400px
 
     ;
     font-family: 'Press Start 2P', cursive;
 }
-* { cursor: url(img/ghostface.cur), default}
+* { cursor: url(../img/ghostface.cur), default}
 h1 {
     font-size: 70pt;
 }
