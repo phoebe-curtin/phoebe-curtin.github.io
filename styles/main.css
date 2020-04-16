@@ -53,7 +53,8 @@ h1 {
     right: 120px;
     top: 100pt;
 }
-
+.home { font-size: 25pt;
+}
 
 p {
     color: white;
