@@ -6,6 +6,7 @@ body {
     ;
     font-family: 'Press Start 2P', cursive;
 }
+* { cursor: url(../img/ghostface.cur), default}
 h1 {
     font-size: 70pt;
 }
