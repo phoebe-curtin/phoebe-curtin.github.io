@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-image: url(../img/new-clouds.jpg);
+    background-image: url(../img/pink-clouds.jpeg);
     background-size: 1400px
 
     ;
@@ -14,3 +14,56 @@ h1 {
     color: white;
 
 }
+.blog {
+    text-align: left;
+    font-size: 25pt;
+    position: relative;
+    bottom: 240px;
+    left: 170px;
+}
+.soundcloud {
+    text-align: left;
+    font-size: 25pt;
+    position: relative;
+    bottom: 90px;
+    left: 68px;
+}
+.instagram {
+    text-align: right;
+    font-size: 25pt;
+    position: relative;
+    bottom: 310px;
+    right: 100px;
+}
+.spotify {
+    text-align: right;
+    font-size: 25pt;
+    position: relative;
+    bottom: 160px;
+    right: 160px;
+}
+.facebook {
+    text-align: right;
+    font-size: 25pt;
+    position: relative;
+    right: 575px;
+    bottom: 50px;
+}
+.move-everything {
+    position: relative;
+    top: 23px;
+}
+
+p {
+    color: white;
+}
+a {
+    color: white;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
