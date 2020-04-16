@@ -22,36 +22,36 @@ h1 {
     text-align: left;
     font-size: 25pt;
     position: relative;
-    bottom: 150pt;
+    bottom: 153pt;
     right: 220pt;
 }
 .soundcloud {
     text-align: left;
     font-size: 25pt;
     position: relative;
-    bottom: 90px;
-    left: 68px;
+    bottom: 40pt;
+    left: 255pt;
 }
 .instagram {
     text-align: right;
     font-size: 25pt;
     position: relative;
-    bottom: 310px;
-    right: 100px;
+    bottom: 208px;
+    right: 0px;
 }
 .spotify {
     text-align: right;
     font-size: 25pt;
     position: relative;
-    bottom: 160px;
-    right: 160px;
+    bottom: 90px;
+    right: 310px;
 }
 .facebook {
     text-align: right;
     font-size: 25pt;
     position: relative;
-    right: 575px;
-    bottom: 50px;
+    right: 120px;
+    top: 100pt;
 }
 
 
