@@ -24,6 +24,10 @@ h1 {
     bottom: 90px;
     right: 310px;
 }
+.backhome {
+    font-size: 25pt;
+    position: relative;  
+}
 
 }
 .photo {
@@ -39,6 +43,16 @@ h1 {
     font-size: 15pt;
     position: relative;
     bottom: 30pt;
+}
+.questions {
+    color: white;
+    font-size: 15pt;
+    position: relative;
+}
+.answers {
+    color: black;
+    font-size: 15pt;
+    position: relative;
 }
 .boxes { 
     color: white;
@@ -100,9 +114,14 @@ h1 {
     right: 120px;
     top: 100pt;
 }
-.home { font-size: 25pt;
+.bloghome { font-size: 25pt;
     position: relative;
    top: 700pt;
+}
+.bloghome2 { 
+    font-size: 25pt;
+    position: relative;
+    top: 50pt;
 }
 
 p {
