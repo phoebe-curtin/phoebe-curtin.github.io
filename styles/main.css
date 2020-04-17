@@ -10,11 +10,25 @@ body {
 h1 {
     font-size: 70pt;
 }
+.learninglink {
+    text-align: left;
+    font-size: 25pt;
+    position: relative;
+    bottom: 40pt;
+    left: 255pt;
+}
+.boxeslink {
+    text-align: right;
+    font-size: 25pt;
+    position: relative;
+    bottom: 90px;
+    right: 310px;
+}
 
 }
 .photo {
-    position: relative;
-    left: 310pt;
+    text-align: center;
+   
 }
 .white-text {
     color: white;
