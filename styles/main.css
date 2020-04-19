@@ -14,19 +14,21 @@ h1 {
     text-align: left;
     font-size: 25pt;
     position: relative;
-    bottom: 40pt;
-    left: 255pt;
+    top: 80pt;
+    left: 200pt;
 }
 .boxeslink {
     text-align: right;
     font-size: 25pt;
     position: relative;
-    bottom: 90px;
-    right: 310px;
+    top: 200pt;
+    left: 200pt;
 }
 .backhome {
     font-size: 25pt;
-    position: relative;  
+    position: relative; 
+    top: 330pt; 
+    right: 190pt;
 }
 
 }
@@ -122,6 +124,26 @@ h1 {
     font-size: 25pt;
     position: relative;
     top: 50pt;
+}
+.backsprint3{
+    font-size: 25pt;
+    position: relative;
+    top: 400pt;
+}
+.culturallink { 
+    font-size: 25pt;
+    position: relative;
+    right: 480pt;
+    top: 150pt;
+    
+}
+.sprint3header {
+    color: white;
+    font-size: 50pt;
+}
+.eqtext {
+    color: black;
+    font-size: 18pt;
 }
 
 p {
