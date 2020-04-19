@@ -31,11 +31,7 @@ h1 {
     right: 190pt;
 }
 
-}
-.photo {
-    text-align: center;
-   
-}
+
 .white-text {
     color: white;
 
@@ -82,56 +78,47 @@ h1 {
 }
 
 .blog {
-    text-align: left;
-    font-size: 25pt;
-    position: relative;
-    bottom: 153pt;
-    right: 220pt;
+    font-size: 3rem;
+    margin-left: 1em;
 }
 .soundcloud {
-    text-align: left;
-    font-size: 25pt;
-    position: relative;
-    bottom: 40pt;
-    left: 255pt;
+    text-align: right;
+    font-size: 3rem;
+    
 }
 .instagram {
     text-align: right;
-    font-size: 25pt;
+    font-size: 3rem;
     position: relative;
     bottom: 208px;
-    right: 0px;
 }
 .spotify {
-    text-align: right;
-    font-size: 25pt;
+    text-align: left;
+    font-size: 3rem;
     position: relative;
-    bottom: 90px;
-    right: 310px;
+    margin-left: 1em;
 }
 .facebook {
     text-align: right;
-    font-size: 25pt;
+    font-size: 3rem;
     position: relative;
-    right: 120px;
-    top: 100pt;
 }
-.bloghome { font-size: 25pt;
+.bloghome { font-size: 3rem;
     position: relative;
    top: 700pt;
 }
 .bloghome2 { 
-    font-size: 25pt;
+    font-size: 3rem;
     position: relative;
     top: 50pt;
 }
 .backsprint3{
-    font-size: 25pt;
+    font-size: 3rem;
     position: relative;
     top: 400pt;
 }
 .culturallink { 
-    font-size: 25pt;
+    font-size: 3rem;
     position: relative;
     right: 480pt;
     top: 150pt;
@@ -139,11 +126,11 @@ h1 {
 }
 .sprint3header {
     color: white;
-    font-size: 50pt;
+    font-size: 3rem;
 }
 .eqtext {
     color: black;
-    font-size: 18pt;
+    font-size: 3rem;
 }
 
 p {
@@ -159,3 +146,37 @@ a {
     box-sizing: border-box;
 }
 
+.photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+
+
+.soundcloud-container {
+    width:95%;
+    text-align:right;
+}
+
+.blog-container {
+    width:90%;
+    text-align:left;
+}
+
+.facebook-container {
+    width:90%;
+    text-align:right;
+}
+
+.spotify-container {
+    width:90%;
+    text-align:left;
+}
+
+.instagram-container {
+    width:95%;
+    text-align:right;
+}
