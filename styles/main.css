@@ -30,11 +30,66 @@ h1 {
     top: 330pt; 
     right: 190pt;
 }
+.backsprint3technical {
+    font-size: 25pt;
+    position: relative; 
+    top: 735pt; 
+    right: 20pt;
+}
 
+.htmlcss {
+    color: white;
+    font-size: 15pt;
+}
 
 .white-text {
     color: white;
 
+}
+.loops1 {
+    color: purple;
+    font-size: 15pt;
+}
+.loops2 {
+    color: palevioletred;
+    font-size: 15pt;
+}
+.loops3 {
+    color: purple;
+    font-size: 15pt;
+}
+.loops4 {
+    color: palevioletred;
+    font-size: 15pt;
+}
+.dom {
+    color: black;
+    font-size: 15pt;
+}
+.arrayobj {
+    color: white;
+    font-size: 15pt;
+
+}
+.arrayexample {
+    color: purple;
+    font-size: 15pt;
+}
+.object {
+    color: white;
+    font-size: 15pt;
+}
+.objectexample {
+    color: purple;
+    font-size: 15pt;
+}
+.function {
+    color: palevioletred;
+    font-size: 15pt;
+}
+.functionexample {
+    color: black;
+    font-size: 15pt;
 }
 .chart {
     color: violet;
