@@ -10,6 +10,11 @@ body {
 h1 {
     font-size: 70pt;
 }
+h2 {
+    font-size: 60pt;
+}
+
+
 .learninglink {
     text-align: left;
     font-size: 25pt;
@@ -45,6 +50,14 @@ h1 {
 .white-text {
     color: white;
 
+}
+.neurotext {
+    font-size: 15pt;
+    color: deeppink;
+}
+.growthtext {
+    font-size: 15pt;
+    color: goldenrod;
 }
 .loops1 {
     color: purple;
@@ -167,10 +180,28 @@ h1 {
     position: relative;
     top: 50pt;
 }
-.backsprint3{
+.backsprint3 { 
     font-size: 3rem;
     position: relative;
     top: 500pt;
+}
+.backsprint4 {
+    font-size: 3rem;
+    position: relative;
+
+}
+.culturallink4 {
+    font-size: 3rem;
+    position: relative;
+    right: 300pt;
+    top: 170pt;
+    
+}
+.technicallink3 {
+    font-size: 3rem;
+    position: relative;
+    right: 300pt;
+    top: 120pt;
 }
 .culturallink { 
     font-size: 3rem;
