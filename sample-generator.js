@@ -1,6 +1,7 @@
 // -- SYSTEM -- //
 
 const YOUTUBE_API_KEY = "AIzaSyD3bLEhF37F9PsiHbkVfipqCQg6f7jfGuw";
+const BACKUP_API_KEY = "AIzaSyBI6Co_ZQcdwHNGMhQQ6HnYVUgqsoFbqrs"
 
 var searchText = document.getElementById("search-text");
 
@@ -13,15 +14,35 @@ var startUpAudio = new Audio('./audio/startup.wav');
 
 var finishedLoading = new Audio('./audio/finishedLoading.wav');
 
+var mouseClickAudio = new Audio('./audio/mouseclick.wav');
+
+document.onclick = () => {
+    mouseClickAudio.play();
+}
+
 window.addEventListener('load', (event) => {
     document.getElementById("anything").onclick = generateRandomWord;
     document.getElementById("betterthing").onclick = getBetterResult;
     document.getElementById("secret-button").onclick = activateSecretButton;
 });
 
-// -- GET A RANDOM VIDEO -- //
+// -- API KEYS -- //
+
+var useBackupKey = false
+
+function getAPIKey () {
+
+    if (useBackupKey)
+        return BACKUP_API_KEY
+    else
+        return YOUTUBE_API_KEY
+}
+
+// -- GET A RANDOM VIDEO -- //  
 
 function generateRandomWord() {
+
+    tryingBetterSearch = false
 
     StartLoadingIcon()
 
@@ -29,15 +50,13 @@ function generateRandomWord() {
     .then(response => response.json())
     .then(data => {
 
-            console.log(data[0])
-
             var word = data[0]
             var mainWord = mainWords[Math.floor(Math.random() * (mainWords.length-1))]
             var keyWords = `${word}%20${mainWord}` 
 
             searchText.innerHTML = `Searching for ${word} and ${mainWord}.`
 
-                const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${keyWords}&key=${YOUTUBE_API_KEY}`;
+                const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${keyWords}&key=${getAPIKey()}`;
 
             fetch(url)
             .then(handleErrors)
@@ -60,7 +79,7 @@ function getSearchKeyWords() {
     return keyWords
 }
 
-var mainWords = ["music", "sample", "audio", "sound", "song"]
+var mainWords = ["music", "audio", "sound", "song", "track", "melody"]
 
 var searchWords = ["latin", "gay", "guitar", "robot", "surf", "emo", "terrible", "meme", "german", "scream", "animal", "movie", "video", "videogame"
 , "rap", "hiphop", "ocean", "darkness", "cartoon", "upsetting", "synth", "bells", "strings", "drums", "impressive", "acapella", "singing", "voice", "freestyle",
@@ -71,16 +90,18 @@ var searchWords = ["latin", "gay", "guitar", "robot", "surf", "emo", "terrible",
 
 function getBetterResult() {
 
+    tryingBetterSearch = true
+
     StartLoadingIcon()
   
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${getSearchKeyWords()}&key=${YOUTUBE_API_KEY}`;
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${getSearchKeyWords()}&key=${getAPIKey()}`;
 
     fetch(url)
     .then(handleErrors)
     .then(response => response.json())
     .then(data => {
 
-      var newUrl = `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${getVideoIDStringsFromArray(data.items)}&key=${YOUTUBE_API_KEY}`
+      var newUrl = `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${getVideoIDStringsFromArray(data.items)}&key=${getAPIKey()}`
       fetch(newUrl)
       .then(handleErrors)
       .then(response => response.json())
@@ -135,13 +156,35 @@ function StartLoadingIcon() {
 
 // -- ERROR HANDLING -- //
 
+var tryingBetterSearch = false;
+
+function TryUseBackupKey ()
+{
+    useBackupKey = true;
+
+    if (tryingBetterSearch)
+        getBetterResult();
+    else
+        generateRandomWord();
+}
+
 function ErrorLoading403() {
-    loadingAudio.pause()
-    document.getElementById("error-text").style.display = "block"
-    document.getElementById("sub-error-text").style.display = "block"
-    document.getElementById("youtubeVideo").style.display = "none"
-    document.getElementById("loading-icon").style.display = "none"
-    errorAudio.play(); 
+
+    if (!useBackupKey)
+    {
+        TryUseBackupKey();
+        return;
+    }
+
+    else
+    {
+        loadingAudio.pause()
+        document.getElementById("error-text").style.display = "block"
+        document.getElementById("sub-error-text").style.display = "block"
+        document.getElementById("youtubeVideo").style.display = "none"
+        document.getElementById("loading-icon").style.display = "none"
+        errorAudio.play(); 
+    }
 }
 
 function ErrorLoadingOther() {

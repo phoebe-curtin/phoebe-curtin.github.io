@@ -275,7 +275,6 @@ a {
     font-weight: 500;
     padding: 28px;
     background-color: #F6CEFC;
-    border: solid #FFFFFF 1px;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
@@ -288,7 +287,6 @@ a {
  
  .BUTTON_BXP:hover {
     background: #C9FADF;
-    border: solid #FFFFFF 1px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
@@ -363,3 +361,4 @@ a {
     margin-left: auto;
     display: none;
 }
+
