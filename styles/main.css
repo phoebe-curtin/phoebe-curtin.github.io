@@ -1,19 +1,17 @@
 body {
     text-align: center;
     background-image: url(../img/pink-clouds.jpeg);
-    background-size: 1400px
-
-    ;
+    background-size: 1400px;
     font-family: 'Press Start 2P', cursive;
 }
 * { cursor: url(../img/ghostface.cur), default}
+
 h1 {
     font-size: 70pt;
 }
 h2 {
     font-size: 60pt;
 }
-
 
 .learninglink {
     text-align: left;
@@ -266,3 +264,85 @@ a {
     width:95%;
     text-align:right;
 }
+
+.BUTTON_BXP {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 28px;
+    background-color: #F6CEFC;
+    border: solid #FFFFFF 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+ 
+ .BUTTON_BXP:hover {
+    background: #C9FADF;
+    border: solid #FFFFFF 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+ #loading-icon {
+   display: none;
+   position: absolute;
+   width: 40%;
+   margin-left: 420px;
+   margin-top: 25px;
+
+ }
+
+ #secret-button {
+     position: absolute;
+     color: pink;
+     padding-bottom: 100px;
+     width: 100px;
+     text-align: center;
+ }
+
+ .rainbow { 
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #ff93e4, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 800% 800%;
+  
+  -webkit-animation: rainbow 11s ease infinite;
+  -z-animation: rainbow 11s ease infinite;
+  -o-animation: rainbow 11s ease infinite;
+    animation: rainbow 11s ease infinite;}
+    
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+
+  #search-text {
+      display: none;
+  }
+   
