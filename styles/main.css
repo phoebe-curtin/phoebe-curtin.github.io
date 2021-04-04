@@ -346,3 +346,20 @@ a {
       display: none;
   }
    
+
+#error-text {
+    text-align: center;
+    font-size: 60px;
+    color: #ff2400;
+    display: none;
+}
+
+#sub-error-text {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    display: none;
+}
