@@ -87,7 +87,7 @@ var searchWords = ["latin", "guitar", "robot", "surf", "emo", "terrible", "meme"
 , "rap", "hiphop", "ocean", "darkness", "cartoon", "upsetting", "synth", "bells", "strings", "drums", "impressive", "acapella", "singing", "voice", "freestyle",
 "jazz", "funk", "vinyl", "bassline", "old", "1950s", "2000s", "1920s", "2010", "1990s", "children", "baby", "machinery", "horror", "love", "death", "funeral",
 "gentle", "hippy", "soul", "spy", "classical", "piano", "harp", "beat", "sexy", "underground", "edgy", "westcoast", "caveman", "christian", "country", "metal", "rock", "japanese",
-"korean", "chinese", "highschool", "teen", "worst", "best", "pop", "soundeffect", "technology", "computer", "psychic", "sad", "ancient", "world", "banger", "woman", "man"]
+"korean", "chinese", "highschool", "teen", "worst", "best", "pop", "soundeffect", "technology", "computer", "psychic", "sad", "ancient", "world", "woman", "man"]
 
 
 function getBetterResult() {
