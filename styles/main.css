@@ -362,23 +362,13 @@ a {
     display: none;
 }
 
-
-#video {
-  border: 1px solid #999;
-  width: 98%;
-  max-width: 860px;
-  display: none;
+#preview-window {
+    width: 0%;
+    height: 0%;
 }
 
-.error {
-  color: red;
-}
-
-.warn {
-  color: orange;
-}
-
-.info {
-  color: darkgreen;
+#recording-window {
+    width: 0%;
+    height: 0%;
 }
 

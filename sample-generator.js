@@ -55,6 +55,7 @@ function generateRandomWord() {
             var keyWords = `${word}%20${mainWord}` 
 
             searchText.innerHTML = `Searching for ${word} and ${mainWord}.`
+            filename = `${word}-${mainWord}`
 
                 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${keyWords}&key=${getAPIKey()}`;
 
@@ -76,6 +77,7 @@ function getSearchKeyWords() {
     var mainWord = mainWords[Math.floor(Math.random() * (mainWords.length-1))]
     var keyWords = `${word1}%20${word2}%20${mainWord}` 
     searchText.innerHTML = `Searching for ${word1}, ${word2} and ${mainWord}.`
+    filename = `${word1}-${word2}-${mainWord}`
     return keyWords
 }
 
@@ -263,8 +265,10 @@ function convert_time(duration) {
 
 // -- AUDIO CAPTURE -- //
 
-let preview = document.getElementById("preview");
-let recording = document.getElementById("recording");
+var filename = `ferbys-sampling-website`
+
+let preview = document.getElementById("preview-window");
+let recording = document.getElementById("recording-window");
 let startButton = document.getElementById("startButton");
 let stopButton = document.getElementById("stopButton");
 let downloadButton = document.getElementById("downloadButton");
@@ -320,10 +324,10 @@ startButton.addEventListener("click", function() {
     return new Promise(resolve => preview.onplaying = resolve);
   }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
   .then (recordedChunks => {
-    let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+    let recordedBlob = new Blob(recordedChunks, { type: "audio/wav" });
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
-    downloadButton.download = "RecordedVideo.webm";
+    downloadButton.download = `${filename}.wav`;
 
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
         recordedBlob.type + " media.");
