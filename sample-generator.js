@@ -133,28 +133,58 @@ function getBetterResult() {
 
 // -- SECRET -- // 
 
+var secretModeActivated = false;
+
 function activateSecretButton(e) {
-    e.target.classList.add("rainbow")
-    e.target.innerHTML = "♡"
-    e.target.color = "Red"
-    e.target.style.fontSize = "40pt"
-    var audio = new Audio('./audio/secret.wav');
-    document.getElementById("search-text").style.display = "block"
-    audio.play();
+
+    if (!secretModeActivated)
+    {
+        secretModeActivated = true
+        e.target.classList.add("rainbow")
+        e.target.innerHTML = "♡"
+        e.target.color = "Red"
+        e.target.style.fontSize = "40pt"
+        var audio = new Audio('./audio/secret.wav');
+        document.getElementById("search-text").style.display = "block"
+        audio.play();
+    }
+    else
+    {
+        secretModeActivated = false
+        e.target.classList.remove("rainbow")
+        e.target.innerHTML = "."
+        e.target.color = "Pink"
+        e.target.style.fontSize = "20pt"
+        var audio = new Audio('./audio/unsecret.wav');
+        document.getElementById("search-text").style.display = "none"
+        audio.play();
+    }
 }
 
 // -- LOADING ICON AND SOUND -- //
 
 function StartLoadingIcon() {
+    IdleSkelly();
     loadingAudio.play()
     document.getElementById("loading-icon").style.display = "block"
   }
 
   function StopLoadingIcon() {
-      loadingAudio.pause()
+    WakeSkelly();   
+    loadingAudio.pause()
     document.getElementById("loading-icon").style.display = "none"
     finishedLoading.play();
   }
+
+// -- SKELLY CONTROL -- //
+
+function WakeSkelly() {
+    document.getElementById("skelly").src = "./img/dancing-skelly.gif"
+}
+
+function IdleSkelly() {
+    document.getElementById("skelly").src = "./img/idle-skelly.gif"
+}
 
 // -- ERROR HANDLING -- //
 
