@@ -377,10 +377,6 @@ startButton.addEventListener("click", function() {
   .catch(log);
 }, false);
 
-// stopButton.addEventListener("click", function() {
-//   stop(preview.srcObject);
-// }, false);
-
 stopButton.onclick = () => {
 
     console.log("STOPPPING")
