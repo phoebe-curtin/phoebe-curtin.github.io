@@ -9,9 +9,9 @@ body {
 h1 {
     font-size: 70pt;
 }
-h2 {
-    font-size: 60pt;
-}
+
+
+
 
 .learninglink {
     text-align: left;
@@ -372,3 +372,13 @@ a {
     height: 0%;
 }
 
+.skelly {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+}
+
+#instructions {
+    font-size: 30px;
+}
