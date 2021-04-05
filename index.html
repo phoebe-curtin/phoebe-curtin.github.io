@@ -26,7 +26,7 @@
       <img id="loading-icon" src="./img/loading.gif" alt="description of gif" /> 
       <h3 id="error-text">ERROR</h3>
       <h3 id="sub-error-text">Soz we used up our 10'000 API hits for the day. Come back tomorrow!</h3>
-        <iframe width="60%" height="600px" id="youtubeVideo">
+        <iframe width="60%" height="600px" id="youtubeVideo" allow="display-capture">
          
       </iframe>
 
@@ -34,6 +34,16 @@
       </div>
 
       <div id="secret-button">.</div>
+
+      
+<p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>
+
+<video id="video" autoplay></video>
+<br>
+
+<strong>Log:</strong>
+<br>
+<pre id="log"></pre>
 
      <script src="sample-generator.js"></script>
     </body>
