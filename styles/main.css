@@ -362,6 +362,16 @@ a {
     display: none;
 }
 
+#preview-window {
+    width: 0%;
+    height: 0%;
+}
+
+#recording-window {
+    width: 0%;
+    height: 0%;
+}
+
 .skelly {
     position: fixed;
     bottom: 0;

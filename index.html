@@ -1,13 +1,11 @@
-
-  
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
     <head>
-      <title> FERBY'S SAMPLING WEBSITE </title>
-      <meta charset="UTF-8">
-      <link href="./styles/main.css" rel="stylesheet" type="text/css" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
-      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title> FERBY'S SAMPLING WEBSITE </title>
+        <meta charset="UTF-8">
+        <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     </head>
     
     <body>
@@ -25,22 +23,36 @@
 
      
   
-      <h3 id="search-text">secret mode activated!</h2>
+        <h3 id="search-text">secret mode activated!</h2>
        
-      <div class="write-container">
-      <img id="loading-icon" src="./img/loading.gif" alt="description of gif" /> 
-      <h3 id="error-text">ERROR</h3>
-      <h3 id="sub-error-text">Soz we used up our 10'000 API hits for the day. Come back tomorrow!</h3>
-        <iframe width="60%" height="600px" id="youtubeVideo">
-         
-      </iframe>
+        <div class="write-container">
 
-        <!-- poop --> 
-      </div>
+            <img id="loading-icon" src="./img/loading.gif" alt="description of gif" /> 
 
-      <div id="secret-button">.</div>
+            <h3 id="error-text">ERROR</h3>
+            <h3 id="sub-error-text">Soz we used up our 10'000 API hits for the day. Come back tomorrow!</h3>
+        
+            <iframe width="60%" height="600px" id="youtubeVideo"> </iframe>
 
-     <script src="sample-generator.js"></script>
+        </div>
+
+        <div id="secret-button">.</div>
+
+        <br><br><br>
+
+        <div class="left">
+            <div id="startButton" class="button"> start recording </div>
+            <video id="preview-window" width="160" height="120" autoplay muted></video>
+        </div>
+
+        <div class="right">
+            <div id="stopButton" class="button"> stop recording </div>
+            <video id="recording-window" width="160" height="120" controls></video>
+            <a id="downloadButton" class="button"> download </a>
+            <p id="log"></p>
+        </div>
+
+        <script src="sample-generator.js"></script>
     </body>
-  
+</html>  
   
