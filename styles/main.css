@@ -9,9 +9,16 @@ body {
 h1 {
     font-size: 70pt;
 }
+
+
+
+
+
 h2 {
     font-size: 60pt;
 }
+
+
 
 .learninglink {
     text-align: left;
@@ -368,3 +375,4 @@ a {
     right: 0;
     width: 300px;
 }
+
