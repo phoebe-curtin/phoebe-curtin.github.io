@@ -382,3 +382,15 @@ a {
 #instructions {
     font-size: 30px;
 }
+
+#not-recording-icon {
+    position: absolute;
+    top: 1200px;
+    right: 760px;
+}
+
+#download-icon {
+    position: absolute;
+    top: 1200px;
+    right: 600px;
+}

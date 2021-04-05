@@ -83,11 +83,11 @@ function getSearchKeyWords() {
 
 var mainWords = ["music", "audio", "sound", "song", "track", "melody"]
 
-var searchWords = ["latin", "gay", "guitar", "robot", "surf", "emo", "terrible", "meme", "german", "scream", "animal", "movie", "video", "videogame"
+var searchWords = ["latin", "guitar", "robot", "surf", "emo", "terrible", "meme", "german", "scream", "animal", "movie", "video", "videogame"
 , "rap", "hiphop", "ocean", "darkness", "cartoon", "upsetting", "synth", "bells", "strings", "drums", "impressive", "acapella", "singing", "voice", "freestyle",
 "jazz", "funk", "vinyl", "bassline", "old", "1950s", "2000s", "1920s", "2010", "1990s", "children", "baby", "machinery", "horror", "love", "death", "funeral",
-"gentle", "hippy", "soul", "spy", "classical", "piano", "harp", "beat", "sexy", "underground", "edgy", "westcoast", "feet", "caveman", "christian", "country", "metal", "rock", "japanese",
-"korean", "chinese", "highschool", "teen", "worst", "best", "six", "pop", "soundeffect", "technology", "computer", "psychic", "sad", "lesbian", "transgender", "bisexual"]
+"gentle", "hippy", "soul", "spy", "classical", "piano", "harp", "beat", "sexy", "underground", "edgy", "westcoast", "caveman", "christian", "country", "metal", "rock", "japanese",
+"korean", "chinese", "highschool", "teen", "worst", "best", "pop", "soundeffect", "technology", "computer", "psychic", "sad", "ancient", "world", "banger", "woman", "man"]
 
 
 function getBetterResult() {
