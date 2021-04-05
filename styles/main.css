@@ -13,13 +13,6 @@ h1 {
 
 
 
-
-h2 {
-    font-size: 60pt;
-}
-
-
-
 .learninglink {
     text-align: left;
     font-size: 25pt;
@@ -369,10 +362,13 @@ a {
     display: none;
 }
 
-#skelly {
+.skelly {
     position: fixed;
     bottom: 0;
     right: 0;
     width: 300px;
 }
 
+#instructions {
+    font-size: 30px;
+}
