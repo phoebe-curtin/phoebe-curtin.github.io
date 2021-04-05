@@ -131,7 +131,7 @@ function getBetterResult() {
   }).catch();
 }
 
-// -- SECRET -- // 
+// -- SECRET MODE -- // 
 
 var secretModeActivated = false;
 
@@ -304,14 +304,26 @@ let stopButton = document.getElementById("stopButton");
 let downloadButton = document.getElementById("downloadButton");
 let logElement = document.getElementById("log");
 
-let recordingTimeMS = 5000;
+let recordingTimeMS = 1;
+
+var shouldStopRecording = false;
 
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
 
-function wait(delayInMS) {
-  return new Promise(resolve => setTimeout(resolve, delayInMS));
+function ensureFooIsSet() {
+    return new Promise(function (resolve, reject) {
+        waitForFoo(resolve);
+    });
+}
+
+function waitForFoo(resolve) {
+    if (!shouldStopRecording) {
+        setTimeout(waitForFoo.bind(this, resolve), recordingTimeMS);
+    } else {
+        resolve();
+    }
 }
 
 function startRecording(stream, lengthInMS) {
@@ -320,14 +332,14 @@ function startRecording(stream, lengthInMS) {
 
   recorder.ondataavailable = event => data.push(event.data);
   recorder.start();
-  log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
+  log(recorder.state + " for 10 minutes max...");
 
   let stopped = new Promise((resolve, reject) => {
     recorder.onstop = resolve;
     recorder.onerror = event => reject(event.name);
   });
 
-  let recorded = wait(lengthInMS).then(
+  let recorded = ensureFooIsSet().then(
     () => recorder.state == "recording" && recorder.stop()
   );
 
@@ -360,11 +372,14 @@ startButton.addEventListener("click", function() {
     downloadButton.download = `${filename}.wav`;
 
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
-        recordedBlob.type + " media.");
+        recordedBlob.type + " audio.");
   })
   .catch(log);
 }, false);
 
-stopButton.addEventListener("click", function() {
-  stop(preview.srcObject);
-}, false);
+stopButton.onclick = () => {
+
+    console.log("STOPPPING")
+
+    shouldStopRecording = true;
+}
